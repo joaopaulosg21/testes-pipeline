@@ -12,6 +12,6 @@ public class HelloWorldController {
     @GetMapping("/hello")
     public ResponseEntity<String> hello() {
         log.info("Hello endpoint called!");
-        return ResponseEntity.ok("Hello World!");
+        return ResponseEntity.ok("Hello World updated!");
     }
 }
