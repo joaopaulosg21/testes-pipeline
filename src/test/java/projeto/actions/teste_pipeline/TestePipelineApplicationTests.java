@@ -27,7 +27,7 @@ class TestePipelineApplicationTests {
 
 		mockMvc.perform(get("/hello"))
 				.andExpect(status().isOk())
-				.andExpect(jsonPath("$").value("Hello World!"));
+				.andExpect(jsonPath("$").value("Hello World updated!"));
 	}
 
 }
