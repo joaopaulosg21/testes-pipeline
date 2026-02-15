@@ -1,6 +1,8 @@
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+on:
+  pull_request:
+    types: [opened]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -11,8 +13,8 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
       - run: mvn --batch-mode --update-snapshots verify
-      - run: mkdir staging && cp target/*.jar staging
-      - uses: actions/upload-artifact@v4
-        with:
-          name: Package
-          path: staging
+      #- run: mkdir staging && cp target/*.jar staging
+     # - uses: actions/upload-artifact@v4
+      #  with:
+      #    name: Package
+     #     path: staging
